@@ -1,12 +1,25 @@
 print("Welcome to the quest for epic loot!")
 print("You have 3 challenges in order to get the loot.")
-print("You also have 2 possible roles to choose from.")
-
+print("You also have 2 possible roles to choose from, a warrior or a wizard.")
+userrole = input("Enter your role, all lowercase:")
 
 
 print("You come across a group of goblins on your travels. They look like they are up to no good. What do you do?")
-print("1. Attack the goblins")
-print("2. Run away")
-print("3. Try to talk to the goblins")
-print("4. Do nothing")
-choice = input("Enter your choice: ")
+input("Enter 1 to roll")
+
+def roll():
+    import random
+    return random.randint(1, 12)
+
+def rules():
+    if roll() <= 3:
+        print("You have failed the challenge and have lost an attribute point.")
+
+    elif roll() <= 7:
+        print("You have failed the challenge and didn't lose an attribute point")
+
+    elif roll() <= 10:
+        print("You have succeeded the challenge and didnt gain an attribute point")
+
+    elif roll() <= 12:
+        print("You have succeeded the challenge and have gained an attribute point")

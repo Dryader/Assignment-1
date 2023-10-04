@@ -2,17 +2,17 @@ def roll():
     import random
     return random.randint(1, 12)
 
-def rules():
-    if roll() <= 3:
+def rules(result):
+    if result <= 3:
         print("You have failed the challenge and have lost an attribute point.")
 
-    elif roll() <= 7:
+    elif result <= 7:
         print("You have failed the challenge and didn't lose an attribute point")
 
-    elif roll() <= 10:
+    elif result <= 10:
         print("You have succeeded the challenge and didnt gain an attribute point")
 
-    elif roll() <= 12:
+    elif result <= 12:
         print("You have succeeded the challenge and have gained an attribute point")
 
         

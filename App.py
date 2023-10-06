@@ -19,7 +19,7 @@ if Game.rules(Game.roll(), userrole) == "win":
     print("You beat the goblins and continue on your journey.")
 else:
     print("You lost the fight and continue on your journey")
-
+#test
 
 print("You see a treasure chest in the distance. You go to open it and it is locked.")
 input("Enter 1 to roll")

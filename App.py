@@ -1,12 +1,14 @@
-import Game
+import Game #imports game logic
 firstchallenge = "lost"
 secondchallenge = "lost"
 thirdchallenge = "lost"
+#declares booleans if the user has won or lost the challenge
+
 
 print("Welcome to the quest for epic loot!")
 print("You have 3 challenges in order to get the loot.")
 print("You also have 2 possible roles to choose from, a warrior or a wizard.")
-userrole = input("Enter your role, all lowercase:")
+userrole = input("Enter your role, all lowercase:") 
 
 
 print("You come across a group of goblins on your travels. They look like they are up to no good.")
@@ -23,7 +25,7 @@ print("You see a treasure chest in the distance. You go to open it and it is loc
 input("Enter 1 to roll")
 Game.roll()
 if Game.rules(Game.roll(), userrole) == "win":
-    firstchallenge = "win"
+    secondchallenge = "win"
     print("You opened the chest and found some loot and continue on your journey.")
 else:
     print("You opened the chest and found nothing in and continue on your journey")
@@ -32,8 +34,9 @@ print("You see a giant dragon in the distance. You go to fight it")
 input("Enter 1 to roll")
 Game.roll()
 if Game.rules(Game.roll(), userrole) == "win":
-    firstchallenge = "win"
+    thirdchallenge = "win"
     print("You beat the dragon!.")
 else:
     print("You lost to the dragon!")
 
+Game.winloss(firstchallenge, secondchallenge, thirdchallenge)

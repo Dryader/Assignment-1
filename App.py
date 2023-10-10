@@ -8,13 +8,13 @@ thirdchallenge = "lost"
 print("Welcome to the quest for epic loot!")
 print("You have 3 challenges in order to get the loot.")
 print("You also have 2 possible roles to choose from, a warrior or a wizard.")
-userrole = input("Enter your role, all lowercase:") 
+userrole = input("Enter your role, all lowercase:") #asks the user for their role
 
 
 print("You come across a group of goblins on your travels. They look like they are up to no good.")
 input("Enter 1 to roll")
-Game.roll()
-if Game.rules(Game.roll(), userrole) == "win":
+Game.roll() #calls the roll function from the Game.py file
+if Game.rules(Game.roll(), userrole) == "win": #calls the rules function from the Game.py file
     firstchallenge = "win"
     print("You beat the goblins and continue on your journey.")
 else:
@@ -39,4 +39,4 @@ if Game.rules(Game.roll(), userrole) == "win":
 else:
     print("You lost to the dragon!")
 
-Game.winloss(firstchallenge, secondchallenge, thirdchallenge)
+Game.winloss(firstchallenge, secondchallenge, thirdchallenge) #calls the winloss function from the Game.py file and passes the 3 strings as parameters
